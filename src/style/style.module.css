@@ -1,0 +1,129 @@
+body{
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.main{
+    box-sizing: border-box;
+    margin-right: -91px;
+    padding-right: 53px;
+    width: 327px;
+    /* border: red 1px solid; */
+    padding: 12px;
+    margin: 99px;
+    height: 201px;
+    float: left;
+
+}
+.fbicon{
+    /* border: 2px green solid; */
+    height: 75px;
+}
+.logotext{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    margin-top: 0px;
+    margin-left: 22px;
+    float: right;
+}
+
+.loginform{   
+    /* border: 1px royalblue solid; */
+    height: 222px;
+    width: 226px;
+    float: left;
+    margin: 97px 0px;
+    box-shadow: 0 7px 12px rgb(0 0 0 / 10%), 0 11px 16px rgb(0 0 0 / 10%);
+    background-color: white;
+    position:  relative;
+    border-radius: 10px;
+}
+.inputfields{
+    /* border: 1px solid blue; */
+    height: 148px;
+}
+.input{
+    background: #FFFFFF;
+    border: 1px solid #dadfe7;
+    color: #1d2129;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 22px;
+    line-height: 16px;
+    padding: 0px 8px;
+    vertical-align: middle;
+    height: 30px;
+    width: 176px;
+    font-size: 12px;
+    margin: 18px;
+    border-radius: 4.2px;
+}
+.inputpassword{
+    background: #FFFFFF;
+    border: 1px solid #dadfe7;
+    color: #1d2129;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 22px;
+    line-height: 16px;
+    padding: 0px 8px;
+    vertical-align: middle;
+    height: 30px;
+    width: 176px;
+    font-size: 12px;
+    margin: -10px;
+    border-radius: 4.2px;
+    margin-top: -26px;
+    margin-left: 19px;;
+}
+
+.loginbtn{
+    border: aliceblue;
+    background-color: #1877f2;
+    margin: 10px 0px 0px 19px;
+    width: 193px;
+    border-radius: 3.3px;
+    height: 32px;
+    color: white;
+}
+.loginbtn:hover{
+    background-color: #0f5cc1;
+}
+.forgetpassword{
+    color: #1877f2;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0px 0px 59px;
+    align-items: center;
+}
+.hrtag{
+    
+    border: 1px solid #dadde1;
+    width: 197px;
+    margin-top: 10px;
+
+}
+.createnewbtn{
+    background-color: #42b72a;
+    border: none;
+    margin: 20px 0px 0px 59px;
+    color: white;
+    font-size: 9px;
+    width: 114px;
+    height: 30px;
+    padding: 0px 16px;
+    border-radius: 6px;
+    line-height: 32px;
+}
+.createnewbtn:hover{
+    background-color: rgb(10, 113, 17);
+}
+
+.createpage{
+    margin-top: 46px;
+    font-size: 9px;
+    font-weight: 600;
+    margin-left: 15px;
+}
