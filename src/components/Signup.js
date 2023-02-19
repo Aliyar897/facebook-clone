@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react'
 import styles from "../style/style.module.css";
 import img from "../photos/Capture.JPG";
-
-export default function Login() {
+export default function Signup() {
   return (
     <>
       <div className={styles.imagetext}>
@@ -28,16 +27,16 @@ export default function Login() {
                 className={styles.inputpassword}
                 placeholder="Password"
               ></input>
-              <button className={styles.loginbtn}>Log in</button>
-              <a href="/" className={styles.forgetpassword}>
+              <button className={styles.loginbtn}>Sign up</button>
+              {/* <a href="/" className={styles.forgetpassword}>
                 Forgotten password?
-              </a>
+              </a> */}
               <hr className={styles.hrtag} />
             </div>
             <div>
-              <button className={styles.createnewbtn}>
+              {/* <button className={styles.createnewbtn}>
                 Create new account
-              </button>
+              </button> */}
             </div>
           </form>
           <div className={styles.createpage}>
@@ -52,5 +51,5 @@ export default function Login() {
         </div>
       </div>
     </>
-  );
+  )
 }
