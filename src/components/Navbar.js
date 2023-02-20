@@ -4,7 +4,7 @@ import img from "../photos/Capture.JPG";
 import micon from '../photos/1.JPG'
 import nicon from '../photos/2.JPG'
 import picon from '../photos/3.JPG'
-
+//this is import section g
 
 export default function Navbar() {
   return (
