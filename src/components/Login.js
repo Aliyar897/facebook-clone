@@ -1,14 +1,44 @@
 import React from "react";
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useState } from 'react'
 import styles from "../style/style.module.css";
 import img from "../photos/Capture.JPG";
+import {Link, useNavigate} from 'react-router-dom'
+import {auth} from '../firebas.js'
 
 export default function Login() {
+  const navigator = useNavigate()
+  const [username, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const handleUserNameChange =(event) =>{
+    setUserName(event.target.value)
+  };
+
+  const handlePasswordChange =(event) =>{
+    setPassword(event.target.value)
+  }
+
+  const handleLoginSubmission =(event) => {
+    event.preventDefault();
+    if(username !== ''){
+    
+        signInWithEmailAndPassword(auth, username, password).then((res) =>{
+          console.log('res', res);
+          navigator('/mainpage')
+    
+        }).catch((err) => alert('This is not a valid account, Please Sign Up First', err))      
+  }else{
+    alert('User Name or Password Invalid...')
+  }
+  
+  
+  }  
   return (
     <>
       <div className={styles.imagetext}>
         <div className={styles.main}>
           <div>
-            <img className={styles.fbicon} src={img} />
+            <img alt="Facebook Icon" className={styles.fbicon} src={img} />
           </div>
           <div>
             <h2 className={styles.logotext}>
@@ -23,21 +53,28 @@ export default function Login() {
               <input
                 className={styles.input}
                 placeholder="Email address or phone number"
+                value ={username}
+                onChange ={handleUserNameChange}
               ></input>
               <input
                 className={styles.inputpassword}
                 placeholder="Password"
+                type='password'
+                value={password}
+                onChange ={handlePasswordChange}
               ></input>
-              <button className={styles.loginbtn}>Log in</button>
+              <button 
+                    onClick={handleLoginSubmission}
+                    className={styles.loginbtn}>Log in</button>
               <a href="/" className={styles.forgetpassword}>
                 Forgotten password?
               </a>
               <hr className={styles.hrtag} />
             </div>
             <div>
-              <button className={styles.createnewbtn}>
+              <Link to='/signup'> <button className={styles.createnewbtn}>
                 Create new account
-              </button>
+              </button></Link>
             </div>
           </form>
           <div className={styles.createpage}>
